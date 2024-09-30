@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión del Plan de Estudio - Kinder Garden Smile</title>
+    <link rel="shortcut icon" href="/imagen/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #6200ea;
+        }
+        .navbar-brand {
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f4f4f4;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .admin-panel {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .admin-panel h2 {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+        .switch {
+            margin-top: 10px;
+        }
+        .switch a {
+            color: #6200ea;
+        }
+        .switch a:hover {
+            text-decoration: underline;
+        }
+        .tabs {
+            margin-bottom: 20px;
+        }
+        .navbar-brand{
+            text-shadow: 0 0 10px rgb(52, 218, 10);
+            color: yellow;
+          }
+
+          
+                    
+        .navbar-brand{
+            text-shadow: 0 0 10px rgb(10, 135, 218);
+            color: rgb(238, 238, 238);
+        }
+        .navbar-brand:hover{
+            background-color: #f0f0f0;
+            color: #1877F2;
+            border-radius: 8px;
+    
+        }
+
+        .navbar-nav {
+            text-shadow: 0 0 10px rgb(10, 135, 218);
+        }
+        
+        .navbar-nav .nav-link {
+            color: rgb(238, 238, 238);
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 8px;
+            padding: 10px 15px; /* Agregar padding para mejorar la zona clickeable */
+        }
+        
+        .navbar-nav .nav-link:hover {
+            background-color: #f0f0f0;
+            color: #1877F2;
+            text-shadow: 0 0 15px rgb(10, 135, 218); /* Resaltar el texto en hover */
+        }
+
+          
+    </style>
+</head>
+<body>
+
+
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> Kinder Garden Smile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Cerrar sesión</a>                            
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal de la Gestión del Plan de Estudio -->
+    <div class="container">
+        <div class="admin-panel">
+            <h2>Gestión del Plan de Estudio</h2>
+            <ul class="nav nav-tabs tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="subjects-tab" data-bs-toggle="tab" href="#subjects" role="tab" aria-controls="subjects" aria-selected="true">Temas</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="schedule-tab" data-bs-toggle="tab" href="#schedule" role="tab" aria-controls="schedule" aria-selected="false">Horarios</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="settings-tab" data-bs-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Configuraciones</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <!-- Gestión de Temas -->
+                <div class="tab-pane fade show active" id="subjects" role="tabpanel" aria-labelledby="subjects-tab">
+                    <h3>Administrar Temas del Plan de Estudio</h3>
+                    <form action="#" method="POST" id="subject-form">
+                        <div class="form-group">
+                            <label for="subject-name">Nombre del Tema</label>
+                            <input type="text" id="subject-name" name="subject-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject-description">Descripción</label>
+                            <textarea id="subject-description" name="subject-description" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Agregar Tema</button>
+                    </form>
+                    <hr>
+                    <h4>Lista de Temas</h4>
+                    <!-- Aquí puedes agregar una tabla o lista para mostrar los temas existentes -->
+                </div>
+
+                <!-- Gestión de Horarios -->
+                <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+                    <h3>Administrar Horarios</h3>
+                    <form action="#" method="POST" id="schedule-form">
+                        <div class="form-group">
+                            <label for="schedule-day">Día de la Semana</label>
+                            <select id="schedule-day" name="schedule-day" class="form-control" required>
+                                <option value="" disabled selected>Selecciona un día</option>
+                                <option value="lunes">Lunes</option>
+                                <option value="martes">Martes</option>
+                                <option value="miércoles">Miércoles</option>
+                                <option value="jueves">Jueves</option>
+                                <option value="viernes">Viernes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule-start">Hora de Inicio</label>
+                            <input type="time" id="schedule-start" name="schedule-start" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule-end">Hora de Fin</label>
+                            <input type="time" id="schedule-end" name="schedule-end" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule-subject">Tema</label>
+                            <input type="text" id="schedule-subject" name="schedule-subject" class="form-control" required>
+                        </div>
+                        <button type="submit">Agregar Horario</button>
+                    </form>
+                    <hr>
+                    <h4>Lista de Horarios</h4>
+                    <!-- Aquí puedes agregar una tabla o lista para mostrar los horarios existentes -->
+                </div>
+
+                <!-- Configuraciones Generales -->
+                <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <h3>Configuraciones Generales</h3>
+                    <form action="#" method="POST" id="settings-form">
+                        <div class="form-group">
+                            <label for="school-year">Año Escolar</label>
+                            <input type="text" id="school-year" name="school-year" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="school-hours">Horas de Clase</label>
+                            <input type="text" id="school-hours" name="school-hours" class="form-control" placeholder="Ej. 08:00 - 14:00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Correo Electrónico de Contacto</label>
+                            <input type="email" id="contact-email" name="contact-email" class="form-control" required>
+                        </div>

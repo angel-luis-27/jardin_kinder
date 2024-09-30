@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinder Garden Smile</title>
+    <link rel="shotcut icon" href="/imagen/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/176a481ba6.js" crossorigin="anonymous"></script>
+    <style>
+      
+   /* Estilos generales */
+body {
+  background-color: #8ca111; /* Fondo muy claro para un aspecto limpio */
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna y versátil */
+  color: #333; /* Color de texto oscuro para buena legibilidad */
+  line-height: 1.6; /* Espaciado de líneas para mejor lectura */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand{
+  text-shadow: 0 0 10px rgb(248, 248, 247);
+  color: #6200ea;
+}
+.navbar-brand:hover{
+  color: #dadbdb;
+  background-color: #6200ea;
+  border-radius: 8px;
+}
+
+/* Estilo del título principal */
+h1 {
+  color: #ffffff; /* Texto blanco */
+  background-color: #6200ea; /* Fondo púrpura vibrante */
+  text-align: center;
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: 700; /* Negrita fuerte */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px; /* Bordes redondeados pronunciados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para profundidad */
+}
+
+/* Estilos de navegación */
+nav {
+  background-color: #ffffff; /* Fondo blanco para la barra de navegación */
+  border-bottom: 1px solid #e0e0e0; /* Línea divisoria suave */
+  box-shadow: 0 2px 4px rgba(243, 242, 242, 0.1); /* Sombra ligera */
+}
+
+.navbar-nav .nav-link {
+  color: #2b00ea; /* Color azul morado */
+  font-weight: 500; /* Peso de fuente normal */
+  padding: 15px; /* Espaciado dentro del enlace */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Texto blanco en hover */
+  background-color: #6200ea; /* Fondo azul morado en hover */
+  border-radius: 8px; /* Bordes redondeados en hover */
+}
+
+ 
+/* Estilos para las columnas */
+.col {
+  padding: 20px;
+  border: 1px solid #e0e0e0; /* Borde sutil */
+  background-color: #ffffff; /* Fondo blanco */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  cursor: pointer;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(19, 17, 17, 0.1); /* Sombra suave */
+}
+
+.col:hover {
+  background-color: #6200ea; /* Fondo azul morado al pasar el mouse */
+  color: #ffffff; /* Texto blanco al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Subtítulos con estilo */
+.subtitle {
+  color: #6200ea; /* Color azul morado */
+  cursor: pointer;
+  text-decoration: none; /* Sin subrayado por defecto */
+  font-weight: 600; /* Peso de fuente seminegrita */
+  transition: color 0.3s ease; /* Transición suave en el color del texto */
+}
+
+.subtitle:hover {
+  text-decoration: underline; /* Subrayado en hover */
+}
+
+/* Sección de contenido que se muestra al hacer clic */
+.content-section {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Mostrar contenido al activar la columna */
+.show-content {
+  display: flex;
+  flex-direction: column; /* Disposición vertical */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+/* Estilos de la columna del párrafo e imagen */
+.content-paragraph {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content-image {
+  flex: 1;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados en la imagen */
+  border: 2px solid #6200ea; /* Borde azul morado en la imagen */
+}
+
+
+
+
+
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-bottom: 2px solid #4CAF50;
+            margin: 0;
+        }
+        .img1{
+          width: 100%;
+          height: 550px;
+
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .col-md-4 {
+            flex: 1;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .subtitle {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            font-weight: bold;
+        }
+        .content-section {
+            display: none;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        .content-paragraph p {
+            margin: 0;
+        }
+        .content-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            .col-md-4 {
+                margin-bottom: 15px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            
+        }
+
+
+
+        .container {
+            margin-top: 20px;
+          }
+          
+          .image-container {
+      
+            width: 100%;
+            height: 300px; /* Ajusta la altura según sea necesario */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: none; /* Elimina cualquier borde o sombra */
+            display: flex;
+            flex-direction: column;
+         
+          }
+          
+          .image-container h2 {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+         
+            margin: 0;
+            width: 100%;
+            text-align: center;
+       
+          }
+          
+          .hidden {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            display: none; /* Inicialmente oculto */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+          
+          .show-more {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: none;
+            z-index: 2; /* Asegura que el botón esté sobre la imagen y el contenido oculto */
+            position: absolute;
+            bottom: 0; /* Alinea el botón al fondo del contenedor */
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+
+
+
+
+
+
+
+       /* Pie de página */
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#map-container {
+    margin: 20px 0;
+
+}
+
+
+  </style>
+  
+        
+        
+        
+
+    
+</head>
+<body style="background-color: #f0f0f0;">
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#index.html">Kinder Garden Smile</a>
+            <img src="./imagen/bandera.jpg" alt="" height="40px" width="80px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="noticias.html">noticias</a>
+                  </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contacto">Contacto</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="calendario.html">calendario</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="politica.html">politicas y convivencias</a>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="matricula2.html">inscribir estudiante</a>
+                      </li>
+
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="admin.html">iniciar sesion</a>
+                          
+                          
+  
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1> Jardín Infantil Kinder Garden Smile</h1>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="img1" src="./imagen/img1.jpg" class="d-block w-100" alt="Juegos y diversión">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="background-color: black;">Un Lugar para Crecer y Aprender</h5>
+                    <p style="background-color: black;">En Kinder Garden Smile, brindamos un ambiente seguro y divertido para tus pequeños.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img1" src="./imagen/logo.jpg" class="d-block w-100" alt="Educación" >
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img1" src="./imagen/img8.jpg" class="d-block w-100" alt="Cuidado personal">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Seguridad y Confianza</h5>
+                    <p>Cuidamos a tus pequeños como si fueran nuestros, siempre con una sonrisa.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+
+    <!-- Columna -->
+
+    <div class="container text-center">
+      <div class="row align-items-center">
+          <div class="col">
+            <i class="fa-solid fa-umbrella-beach"></i>
+              Actividades Recreativas 
+              <p>Los niños disfrutan de juegos y dinámicas que estimulan su creatividad y habilidades sociales.</p>
+          </div>
+          <div class="col">
+            <i class="fa-solid fa-school"></i>
+              Educación Temprana
+              <p>Nuestros programas de enseñanza están diseñados para fomentar el aprendizaje a través del juego.</p>
+          </div>
+          <div class="col">
+            <i class="fa-solid fa-mug-hot"></i>
+              Alimentación Saludable
+              <p>Ofrecemos menús balanceados para garantizar el crecimiento y desarrollo saludable de los niños.</p>
+          </div>
+      </div>
+  </div>
+
+
+<center>
+<video  width="1000px" height="500px" controls>
+    <source src="./videos/video2.mp4" type="video/mp4">
+    <source src="./videos/video2.mp4" type="video/ogg">
+
+</video>
+</center>
+
+
+
+
+
+
+  <h1>Jardín Infantil Kinder Garden Smile</h1>
+
+  <!-- Sección principal de servicios -->
+  <div class="container" id="servicios">
+     <center> <h2>Servicios Ofrecidos</h2></center>
+      <div class="row">
+          <!-- Servicio 1: Inscripción y Admisiones -->
+          <div class="col-md-4">
+              <button class="subtitle" onclick="toggleContent(1)">Inscripción y Admisiones</button>
+              <div id="content1" class="content-section">
+                  <div class="content-paragraph">
+                      <p>
+                          Brindamos información detallada sobre el proceso de inscripción para nuevos estudiantes, incluyendo requisitos,
+                          fechas importantes y pasos a seguir. Nuestro objetivo es facilitar a las familias el acceso a una educación de calidad
+                          desde el primer contacto.
+                      </p>
+                  </div>
+                  <div class="content-image">
+                    <img src="./imagen/img6.jpg" alt=""height="150px"width="1500px">
+                      <!-- Espacio para agregar una imagen relevante del proceso de inscripción -->
+                  </div>
+              </div>
+          </div>
+
+          <!-- Servicio 2: Actividades Extraescolares -->
+          <div class="col-md-4">
+              <button class="subtitle" onclick="toggleContent(2)">Actividades Extraescolares</button>
+              <div id="content2" class="content-section">
+                  <div class="content-paragraph">
+                      <p>
+                          Ofrecemos una variedad de actividades extraescolares, incluyendo deportes, arte, y música, para fomentar el desarrollo integral
+                          de nuestros estudiantes. Estas actividades están diseñadas para complementar el currículo educativo y proporcionar experiencias
+                          enriquecedoras fuera del aula.
+                      </p>
+                  </div>
+                  <div class="content-image">
+                    <img src="./imagen/img5.jpg" alt=""height="150px"width="1500px">
+                      <!-- Espacio para agregar una imagen relevante de las actividades extraescolares -->
+                  </div>
+              </div>
+          </div>
+
+          <!-- Servicio 3: Escuela de Padres -->
+          <div class="col-md-4">
+              <button class="subtitle" onclick="toggleContent(3)">Escuela de Padres</button>
+              <div id="content3" class="content-section">
+                  <div class="content-paragraph">
+                      <p>
+                          Ofrecemos talleres y programas diseñados para apoyar a los padres en su rol educativo y en el desarrollo de sus hijos. 
+                          La Escuela de Padres proporciona recursos y estrategias para mejorar la comunicación y el aprendizaje en casa.
+                      </p>
+                  </div>
+                  <div class="content-image">
+                    <img src="./imagen/img7.jpg" alt=""height="150px"width="1500px">
+                      <!-- Espacio para agregar una imagen relevante de la escuela de padres -->
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      // Función para mostrar/ocultar contenido
+      function toggleContent(section) {
+          var content = document.getElementById('content' + section);
+          if (content.style.display === "none" || content.style.display === "") {
+              content.style.display = "block";  // Asegura que se muestra el contenido
+          } else {
+              content.style.display = "none";  // Oculta el contenido si ya está visible
+          }
+      }
+  </script>
+  
+
+
+
+  <!-- Galería del Objetivo del Taller -->
+  
+
+  <!-- Galería de la Primera Sesión (Página de Inicio) -->
+ 
+
+  <!-- Galería de la Estructura del Taller -->
+ 
+  <!-- Galería de la Estructura del Taller -->
+ 
+  <div class="container text-center" id="Galeria">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 g-lg-3">
+      <!-- Primera columna -->
+      <div class="col">
+        <div class="image-container" style="background-image: url('imagen/img7.jpg');">
+          <h2>Estructura del Taller</h2>
+          <button class="show-more">Mostrar descripción</button>
+          <p class="hidden">
+            El Taller de Creación del Jardín Infantil Kinder Garden Smile está diseñado para ofrecer una experiencia educativa enriquecedora. Se divide en cuatro sesiones, cada una enfocada en un aspecto fundamental del Proyecto Educativo Institucional (PEI). Estas sesiones se centran en proporcionar a los participantes un entendimiento claro de los valores y principios que guían al jardín, así como las actividades y servicios que se ofrecen          </p>
+        </div>
+      </div>
+      <!-- Segunda columna -->
+      <div class="col">
+        <div class="image-container" style="background-image: url('imagen/img9..jpg');">
+          <h2>Objetivo del Taller</h2>
+          <button class="show-more">Mostrar descripción</button>
+          <p class="hidden">
+            El objetivo del taller es brindar a las familias y a la comunidad una comprensión profunda de los valores, misión y visión del Jardín Infantil Kinder Garden Smile. A través de las actividades, se busca resaltar la importancia de la educación integral, la atención personalizada y el desarrollo de habilidades sociales y emocionales en los niños.          </p>
+        </div>
+      </div>
+      <!-- Tercera columna -->
+      <div class="col">
+        <div class="image-container" style="background-image: url('imagen/img3.jpg');">
+          <h2>Primera Sesión: Página de Inicio</h2>
+          <button class="show-more">Mostrar descripción</button>
+          <p class="hidden">
+            En la primera sesión, se presentará la historia y la identidad del Jardín Infantil Kinder Garden Smile. Se compartirán detalles sobre la misión y visión de la institución, así como su compromiso con la educación de calidad. Esta página servirá como una introducción a todo lo que el jardín representa, destacando sus colores institucionales, el logo y la importancia de crear un ambiente acogedor y estimulante para los niños.          </p>
+        </div>
+      </div>
+      <!-- Cuarta columna -->
+      <div class="col">
+        <div class="image-container" style="background-image: url('imagen/bandera.jpg');">
+          <h2>Actividades y comunidad </h2>
+          <button class="show-more">Mostrar descripción</button>
+          <p class="hidden">
+            El Jardín Infantil Kinder Garden Smile fomenta un aprendizaje inclusivo y diverso. La comunidad participa en talleres de arte y actividades deportivas, enriqueciendo la formación de los niños. También se organizan eventos como ferias culturales, donde las familias se involucran, fortaleciendo así valores como la solidaridad y el respeto.      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.show-more').click(function() {
+        $(this).next('.hidden').slideToggle();
+        $(this).text($(this).text() === 'Mostrar descripción' ? 'Ocultar descripción' : 'Mostrar descripción');
+      });
+    });
+  </script>
+  
+  
+
+
+  
+<!-- Pie de página con mapa -->
+<div class="container" id="Contacto">
+  <div class="row">
+    <!-- Columna para WhatsApp -->
+    <div class="col-4" style="text-align: center; margin-top: 50px;">
+      <div class="tr">
+        <h3 class="text-uppercase">WhatsApp</h3>
+        <h3><i class="fa-brands fa-whatsapp" style="color: #046411;"></i></h3>
+        <h5 class="text-uppercase">2335542</h5>
+      </div>
+    </div>
+
+    <!-- Columna para Instagram -->
+    <div class="col-4" style="text-align: center; margin-top: 50px;">
+      <div class="tr">
+        <h3 class="text-uppercase">Instagram</h3>
+        <h3><i class="fa-brands fa-instagram" style="color: #c53087;"></i></h3>
+        <h5 class="text-uppercase">Jardín Infantil Kinder Garden Smile</h5>
+      </div>
+    </div>
+
+    <!-- Columna para Facebook -->
+    <div class="col-4" style="text-align: center; margin-top: 50px;">
+      <div class="tr">
+        <h3 class="text-uppercase">Facebook</h3>
+        <h3><i class="fa-brands fa-facebook" style="color: #051df7;"></i></h3>
+        <h5 class="text-uppercase">Jardín Infantil Kinder Garden Smile</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <center><div class="col-9" style="margin-left: 20px;"> <!-- Ajusta el margen izquierdo aquí -->
+          <div id="map-container" style="height: 400px; width: 100%;">
+              <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.489347196259!2d-99.13320908472942!3d19.432607486886295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b6cdd7b77%3A0x54cfdf5d6b3d47bb!2sPalacio%20de%20Bellas%20Artes!5e0!3m2!1ses!2smx!4v1637194018475!5m2!1ses!2smx" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy">
+              </iframe>
+          </div>   
+      </div>
+  </div>
+</div></center>
+
+        <!-- Mapa incrustado de Google Maps -->
+              
+            
+   
+     </div>
+     <br>
+     <br>
+     <br>
+            
+
+
+<!-- Scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+        
+
+
+</body>
+</html>
